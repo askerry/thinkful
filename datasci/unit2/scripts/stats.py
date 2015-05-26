@@ -1,6 +1,9 @@
 
 import pandas as pd
 from StringIO import StringIO
+import sys
+import exceptions
+import numpy as np
 
 def load_data(csvstring):
     '''load csv string into pandas dataframe'''
@@ -27,9 +30,6 @@ def describe_variability(df, substance):
     
 
 if __name__=="__main__":
-    import sys
-    import exceptions
-    import numpy as np
     
     csvstring = '''Region,Alcohol,Tobacco
     North, 6.47, 4.03

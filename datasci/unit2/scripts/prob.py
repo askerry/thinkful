@@ -1,4 +1,11 @@
 
+import scipy.stats
+from collections import Counter
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style('white')
+
 def print_frequencies(data):
     counts=Counter(data)
     for i in sorted(counts.keys()):
@@ -29,12 +36,6 @@ def save_qqplot(data):
     plt.savefig("../figs/data_qqplot.png")
 
 if __name__=="__main__":
-    import scipy.stats
-    from collections import Counter
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-    sns.set_style('white')
     
     data= [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 9, 9]
     

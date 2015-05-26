@@ -1,4 +1,8 @@
 
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy.stats
+
 def load_data(url):
     df = pd.read_csv(url)
     df.dropna(inplace=True)
@@ -16,9 +20,6 @@ def save_plots(df, column):
     plt.savefig("../figs/lending_qqplot")
     
 if __name__=="__main__":
-    import pandas as pd
-    import matplotlib.pyplot as plt
-    import scipy.stats
     
     dataurl='https://spark-public.s3.amazonaws.com/dataanalysis/loansData.csv'
     df=load_data(dataurl)
